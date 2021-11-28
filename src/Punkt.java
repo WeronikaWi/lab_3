@@ -40,15 +40,45 @@ public class Punkt {
     }
 
     public int getpZ() {
-        return pZ*10;
+        return pZ * 10;
     }
 
     public void setpZ(int pZ) {
         this.pZ = pZ;
     }
 
-
+    //    a) suma - sumująca wszystkie wartości w klasie
+    public int suma() {
+        return this.pX + this.pY + this.pZ;
     }
+
+//    b) różnica - metody przeciążone roznica(){} i roznica(int x, int y, int z){}
+//    c) metody różnica mają wykonwywać dzialania :
+//    roznica(){ return pX - pY - pZ} i roznica(int x, int y, int z){ return pX*x - pY*y - pZ*z }
+//
+
+    public int roznica(){
+        return pX - pY - pZ;
+    }
+
+    public int roznica(int x, int y, int z){
+        return pX*x - pY*y - pZ*z;
+    }
+
+    @Override
+    public String toString() {
+        return "Punkt{" +
+                "pX = " + pX +
+                ", pY = " + pY +
+                ", pZ = " + pZ +
+                '}';
+    }
+
+    //    d) nadpisać metodę toString(), aby zwracała wszystkie wartości pól, analogicznie jak w przykładzie
+
+
+
+}
     /* stworzyć
         a) pusty konstruktor,
         b) konstruktor inicjalizujacy zmienną pX,
@@ -66,4 +96,4 @@ public class Punkt {
             roznica(){ return pX - pY - pZ} i roznica(int x, int y, int z){ return pX*x - pY*y - pZ*z }
         d) nadpisać metodę toString(), aby zwracała wszystkie wartości pól, analogicznie jak w przykładzie
      */
-}
+
