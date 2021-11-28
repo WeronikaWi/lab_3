@@ -22,12 +22,12 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         int liczba;
-        boolean czyKoniec;
+        boolean czyKoniec = false;
 
         while (true) {
             System.out.println("Podaj liczbę: ");
             liczba = scan.nextInt();
-            czyKoniec = StatusEnum.KONTYNUUJEMY.status;
+
             switch (liczba) {
                 case 0:
                     czyKoniec = StatusEnum.KONIEC.status;
