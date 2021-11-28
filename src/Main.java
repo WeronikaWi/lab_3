@@ -14,5 +14,15 @@ public class Main {
             c) wyświetlić dane z tablicy, użyć pętli for lub forEach
             d) dane powinny być estetycznie przedstawione
          */
+        Student student1 = new Student("Marek", "Kowalski", 123456, true);
+        Student student2 = new Student("Ola", "Nowak", 43256, false);
+        Student student3 = new Student("Alex", "Król", 53827, true);
+
+        Student[] studenci = {student1, student2, student3};
+
+
+        for (Student student : studenci) {
+            System.out.println(student);
+        }
     }
 }
