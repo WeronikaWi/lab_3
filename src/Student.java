@@ -13,6 +13,7 @@ public class Student {
         this.czyAktywny = czyAktywny;
     }
 
+    @Override
     public String toString()
     {
         String status;
