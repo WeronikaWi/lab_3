@@ -6,6 +6,9 @@ public class Student {
     private int numer_indeksu;
     private boolean czyAktywny;
 
+    public Student() {
+    }
+
     public Student(String imie, String nazwisko, int numer_indeksu, boolean czyAktywny) {
         this.imie = imie;
         this.nazwisko = nazwisko;
@@ -14,10 +17,9 @@ public class Student {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         String status;
-        if(czyAktywny == true)
+        if (czyAktywny == true)
             status = "Aktywny";
         else
             status = "Nieaktywny";
