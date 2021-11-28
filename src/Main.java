@@ -18,7 +18,68 @@ public class Main {
         */
 
         /* statusy i wybór ze switch case to najczęstsze użycia enumów, enumy są często używane
-        * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
+         * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
+
+        Scanner scan = new Scanner(System.in);
+        int liczba;
+        boolean czyKoniec;
+
+        while (true) {
+            System.out.println("Podaj liczbę: ");
+            liczba = scan.nextInt();
+            czyKoniec = StatusEnum.KONTYNUUJEMY.status;
+            switch (liczba) {
+                case 0:
+                    czyKoniec = StatusEnum.KONIEC.status;
+                    break;
+                case 1:
+                    System.out.println(LiczbyEnum.JEDEN);
+                    break;
+                case 2:
+                    System.out.println(LiczbyEnum.DWA);
+                    break;
+                case 3:
+                    System.out.println(LiczbyEnum.TRZY);
+                    break;
+                case 4:
+                    System.out.println(LiczbyEnum.CZTERY);
+                    break;
+                case 5:
+                    System.out.println(LiczbyEnum.PIĘĆ);
+                    break;
+                case 6:
+                    System.out.println(LiczbyEnum.SZEŚĆ);
+                    break;
+                default:
+                    System.out.println("Program nie obsługuje tej liczby");
+                    break;
+            }
+            if(czyKoniec == true)
+            {
+                System.out.println(StatusEnum.KONIEC);
+                break;
+            }
+            else
+                System.out.println(StatusEnum.KONTYNUUJEMY);
+
+
+        }
 
     }
 }
+
+//a) Stworzyć prosty enum "LiczbyEnum" z liczbami od 1 do 6 zapisanymi słownie,
+enum LiczbyEnum {
+    JEDEN, DWA, TRZY, CZTERY, PIĘĆ, SZEŚĆ;
+}
+
+//b) stworzyć prosty enum "StatusEnum" z wartościami KONTYNUUJEMY i KONIEC,
+enum StatusEnum {
+    KONTYNUUJEMY(false), KONIEC(true);
+
+    boolean status;
+
+    StatusEnum(boolean czyKoniec) {
+        status = czyKoniec;
+    }
+    }
