@@ -1,0 +1,3 @@
+public enum WydzialEnum {
+    INFORMATYKI, ADMINISTRACJI, PSYCHOLOGII, ZARZĄDZANIA;
+}
