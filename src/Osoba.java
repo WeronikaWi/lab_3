@@ -44,7 +44,7 @@ public class Osoba {
 
     @Override
     public String toString() {
-        return "Osoba\n" + "Imie: " + imie +
+        return "Imie: " + imie +
                 "\nNazwisko: " + nazwisko +
                 "\nIndeks: " + indeks;
     }

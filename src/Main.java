@@ -1,9 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         /* ćw 4 klasy */
+        List<Student> studentList = new ArrayList<>();
 
-        /* zad.1
+        Student student = new Student("Marek", "Kowalski", 123456, WydzialEnum.INFORMATYKI);
+        studentList.add(student);
+        student = new Student("Olga", "Nowak", 634156, WydzialEnum.ZARZĄDZANIA);
+        studentList.add(student);
+        student = new Student("Olaf", "Kowal", 645656, WydzialEnum.PSYCHOLOGII);
+        studentList.add(student);
+        student = new Student("Anna", "Król", 345676, WydzialEnum.INFORMATYKI);
+        studentList.add(student);
+        student = new Student("Alex", "Miller", 567846, WydzialEnum.ADMINISTRACJI);
+        studentList.add(student);
+
+        for (Student s: studentList) {
+            System.out.println(s);
+        }
+
+    }
+}
+/* zad.1
             a) Stworzyć klasę Osoba z polami prywatnymi:
             - imie (String),
             - nazwisko (String),
@@ -27,6 +48,3 @@ public class Main {
             b) dodać studentów do Listy ArrayList,
             c) przeiterować listę za pomocą pętli forEach wywołując na każdym objekcie metodę toString() (w każdej iteracji);
          */
-
-    }
-}
