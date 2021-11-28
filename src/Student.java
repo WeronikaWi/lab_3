@@ -11,6 +11,9 @@ public class Student {
     private Osoba osoba;
     private WydzialEnum wydzial;
 
+    public Student() {
+    }
+
     public Student(String imie, String nazwisko, int numer_indeksu, WydzialEnum wydzial) {
         this.osoba = new Osoba(imie, nazwisko, numer_indeksu);
         this.wydzial = wydzial;

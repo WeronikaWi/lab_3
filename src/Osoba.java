@@ -12,6 +12,9 @@ public class Osoba {
     private String imie, nazwisko;
     private int indeks;
 
+    public Osoba() {
+    }
+
     public Osoba(String imie, String nazwisko, int indeks) {
         this.imie = imie;
         this.nazwisko = nazwisko;
