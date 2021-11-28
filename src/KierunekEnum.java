@@ -1,0 +1,3 @@
+public enum KierunekEnum {
+    INFORMATYKA, PEDAGOGIKA, ROBOTYKA, PSYCHOLOGIA;
+}
